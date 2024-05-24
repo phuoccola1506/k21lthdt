@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package myoop;
+package lesson02bai2;
 
 /**
  *
  * @author TGDD
  */
 
-import lesson03.SinhVien;
-import lesson03.GiangVien;
+import lesson01bai3.SinhVien;
+import lesson01bai3.GiangVien;
 
 public class QuanLySinhVien {
 
