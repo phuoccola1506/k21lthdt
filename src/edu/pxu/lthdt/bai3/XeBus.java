@@ -17,10 +17,10 @@ public class XeBus {
     private int soghe;
 
     public XeBus(String hangxe, int namsanxuat, float dongco, int soghe) {
-        this.hangxe = setHangxe(hangxe);
-        this.namsanxuat = setNamsanxuat(namsanxuat);
-        this.dongco = setDongco(dongco);
-        this.soghe = setSoghe(soghe);
+        this.setHangxe(hangxe);
+        this.setNamsanxuat(namsanxuat);
+        this.setDongco(dongco);
+        this.setSoghe(soghe);
     }
 
     public String getHangxe() {
@@ -39,45 +39,50 @@ public class XeBus {
         return soghe;
     }
 
-    public String setHangxe(String hangxe) {
+    public void setHangxe(String hangxe) {
         this.hangxe = hangxe;
-        
-        return hangxe;
     }
 
-    public int setNamsanxuat(int namsanxuat) {
+    public void setNamsanxuat(int namsanxuat) {
         LocalDate date = LocalDate.now();
         int namhientai = date.getYear();
         
         if (namsanxuat < 1894 || namsanxuat > namhientai) {
             System.out.println("Nam san xuat " + namsanxuat + " khong hop le.");
+        } else {
+            this.namsanxuat = namsanxuat;
         }
-        this.namsanxuat = namsanxuat;
-        
-        return namsanxuat;
     }
 
-    public float setDongco(float dongco) {
+    public void setDongco(float dongco) {
         if (dongco <= 0) {
             System.out.println("Dong co khong the co cong suat la " + dongco + "kW");
         } else {
             this.dongco = dongco;
         }
-        return dongco;
     }
 
-    public int setSoghe(int soghe) {
+    public void setSoghe(int soghe) {
         if (soghe <= 0) {
             System.out.println("So ghe " + soghe + " khong hop le.");
         } else {
             this.soghe = soghe;
         }
-        return soghe;
     }
 
     @Override
     public String toString() {
-        return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + ", soghe=" + soghe + '}';
+        if (namsanxuat == 0 || dongco == 0 || soghe == 0){
+            return "XeBus{" + "hangxe=" + hangxe + '}';
+        } else if (namsanxuat == 0) {
+            return "XeBus{" + "hangxe=" + hangxe + ", dongco=" + dongco + ", soghe=" + soghe + '}';
+        } else if (dongco == 0) {
+            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", soghe=" + soghe + '}';
+        } else if (soghe == 0) {
+            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + '}';
+        } else {
+            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + ", soghe=" + soghe + '}';
+        }
     }
     
     

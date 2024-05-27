@@ -16,9 +16,9 @@ public class XeOto {
     private float dongco;
 
     public XeOto(String hangxe, int namsanxuat, float dongco) {
-        this.hangxe = setHangxe(hangxe);
-        this.namsanxuat = setNamsanxuat(namsanxuat);
-        this.dongco = setDongco(dongco);
+        this.setHangxe(hangxe);
+        this.setNamsanxuat(namsanxuat);
+        this.setDongco(dongco);
     }
 
     public String getHangxe() {
@@ -33,13 +33,11 @@ public class XeOto {
         return dongco;
     }
 
-    public String setHangxe(String hangxe) {
+    public void setHangxe(String hangxe) {
         this.hangxe = hangxe;
-        
-        return hangxe;
     }
 
-    public int setNamsanxuat(int namsanxuat) {
+    public void setNamsanxuat(int namsanxuat) {
         LocalDate date = LocalDate.now();
         int namhientai = date.getYear();
         
@@ -48,23 +46,27 @@ public class XeOto {
         } else {
             this.namsanxuat = namsanxuat;
         }
-        
-        return namsanxuat;
     }
 
-    public float setDongco(float dongco) {
+    public void setDongco(float dongco) {
         if (dongco <= 0) {
             System.out.println("Dong co khong the co cong suat la " + dongco + "kW");
         } else {
             this.dongco = dongco;
         }
-        
-        return dongco;
     }
 
     @Override
     public String toString() {
-        return "XeOto{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + '}';
+        if (namsanxuat == 0 || dongco == 0){
+            return "XeOto{" + "hangxe=" + hangxe + '}';
+        } else if (namsanxuat == 0) {
+            return "XeOto{" + "hangxe=" + hangxe + ", dongco=" + dongco + '}';
+        } else if (dongco == 0) {
+            return "XeOto{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + '}';
+        } else {
+            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + '}';
+        }
     }
     
     
