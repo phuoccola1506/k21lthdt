@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package lesson02bai2;
+package lesson2.task2;
 
 /**
  *
  * @author TGDD
  */
 
-import lesson01bai3.SinhVien;
-import lesson01bai3.GiangVien;
+import lesson1.task3.SinhVien;
+import lesson1.task3.GiangVien;
 
 public class QuanLySinhVien {
 
