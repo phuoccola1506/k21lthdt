@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package lesson9;
+package lesson09;
 
-import lesson9.vidu1.LopHoc;
-import lesson9.vidu1.SinhVien;
+import lesson09.vidu1.LopHoc;
+import lesson09.vidu1.SinhVien;
 
 /**
  *

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package lesson9.vidu2;
+package lesson09.task1;
 
 /**
  *
@@ -10,10 +10,20 @@ package lesson9.vidu2;
  */
 public class SanPham implements Cloneable {
 
+    private int maSP;
     private String tenSP;
 
-    public SanPham(String tenSP) {
+    public SanPham(int maSP, String tenSP) {
+        this.maSP = maSP;
         this.tenSP = tenSP;
+    }
+
+    public int getMaSP() {
+        return maSP;
+    }
+
+    public void setMaSP(int maSP) {
+        this.maSP = maSP;
     }
 
     public String getTenSP() {
@@ -26,11 +36,11 @@ public class SanPham implements Cloneable {
 
     @Override
     public String toString() {
-        return "SanPham{" + "tenSP=" + tenSP + '}';
+        return "SanPham{" + "maSP=" + maSP + ", tenSP=" + tenSP + '}';
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return super.clone(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
 

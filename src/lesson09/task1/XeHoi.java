@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package lesson9.vidu3;
+package lesson09.task1;
 
 import java.util.ArrayList;
 
@@ -10,18 +10,20 @@ import java.util.ArrayList;
  *
  * @author TGDD
  */
-public class XeHoi {
+public class XeHoi extends SanPham {
 
     private DongCo dongco;
     private ArrayList<BanhXe> dsbx;
 
-    public XeHoi(DongCo dongco, ArrayList<BanhXe> dsbx) {
+    public XeHoi(DongCo dongco, ArrayList<BanhXe> dsbx, int maSP, String tenSP) {
+        super(maSP, tenSP);
         this.dongco = dongco;
         this.dsbx = dsbx;
     }
 
-    public XeHoi(DongCo dongco) throws CloneNotSupportedException {
-        this.dongco = (DongCo)dongco.clone();
+    public XeHoi(DongCo dongco, int maSP, String tenSP) {
+        super(maSP, tenSP);
+        this.dongco = dongco;
         this.dsbx = new ArrayList<>();
     }
     
@@ -47,7 +49,7 @@ public class XeHoi {
 
     @Override
     public String toString() {
-        return "XeHoi{" + "dongco=" + dongco + ", dsbx=" + dsbx + '}';
+        return "XeHoi{" + super.toString() + "dongco=" + dongco + ", dsbx=" + dsbx + '}';
     }
-    
+
 }
