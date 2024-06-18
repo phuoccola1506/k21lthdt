@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package edu.pxu.lthdt.bai3;
+package luyentap.edu.pxu.lthdt.bai3;
 
 /**
  *

@@ -4,7 +4,7 @@
  */
 package lesson05.task1;
 
-import ztrashcanz.Wizard;
+import luyentap.ztrashcanz.Wizard;
 
 /**
  *

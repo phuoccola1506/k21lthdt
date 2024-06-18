@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.pxu.lthdt.bai3;
+package luyentap.edu.pxu.lthdt.bai3;
 
 import java.time.LocalDate;
 
@@ -10,17 +10,15 @@ import java.time.LocalDate;
  *
  * @author TGDD
  */
-public class XeBus {
+public class XeOto {
     private String hangxe;
     private int namsanxuat;
     private float dongco;
-    private int soghe;
 
-    public XeBus(String hangxe, int namsanxuat, float dongco, int soghe) {
+    public XeOto(String hangxe, int namsanxuat, float dongco) {
         this.setHangxe(hangxe);
         this.setNamsanxuat(namsanxuat);
         this.setDongco(dongco);
-        this.setSoghe(soghe);
     }
 
     public String getHangxe() {
@@ -35,10 +33,6 @@ public class XeBus {
         return dongco;
     }
 
-    public int getSoghe() {
-        return soghe;
-    }
-
     public void setHangxe(String hangxe) {
         this.hangxe = hangxe;
     }
@@ -47,7 +41,7 @@ public class XeBus {
         LocalDate date = LocalDate.now();
         int namhientai = date.getYear();
         
-        if (namsanxuat < 1894 || namsanxuat > namhientai) {
+        if (namsanxuat < 1885 || namsanxuat > namhientai) {
             System.out.println("Nam san xuat " + namsanxuat + " khong hop le.");
         } else {
             this.namsanxuat = namsanxuat;
@@ -62,26 +56,16 @@ public class XeBus {
         }
     }
 
-    public void setSoghe(int soghe) {
-        if (soghe <= 0) {
-            System.out.println("So ghe " + soghe + " khong hop le.");
-        } else {
-            this.soghe = soghe;
-        }
-    }
-
     @Override
     public String toString() {
-        if (namsanxuat == 0 || dongco == 0 || soghe == 0){
-            return "XeBus{" + "hangxe=" + hangxe + '}';
+        if (namsanxuat == 0 || dongco == 0){
+            return "XeOto{" + "hangxe=" + hangxe + '}';
         } else if (namsanxuat == 0) {
-            return "XeBus{" + "hangxe=" + hangxe + ", dongco=" + dongco + ", soghe=" + soghe + '}';
+            return "XeOto{" + "hangxe=" + hangxe + ", dongco=" + dongco + '}';
         } else if (dongco == 0) {
-            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", soghe=" + soghe + '}';
-        } else if (soghe == 0) {
-            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + '}';
+            return "XeOto{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + '}';
         } else {
-            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + ", soghe=" + soghe + '}';
+            return "XeBus{" + "hangxe=" + hangxe + ", namsanxuat=" + namsanxuat + ", dongco=" + dongco + '}';
         }
     }
     

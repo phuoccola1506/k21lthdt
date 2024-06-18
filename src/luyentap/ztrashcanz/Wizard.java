@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ztrashcanz;
+package luyentap.ztrashcanz;
 
-import lesson5.task1.Character;
+import lesson05.task1.Character;
 
 /**
  *
  * @author TGDD
  */
-public class ArcherAndGunner extends Character {
+public class Wizard extends Character {
     private String vuKhiChinh;
     private String capBac;
 
-    public ArcherAndGunner(String nameOfPlayer, int level, String gender, String vuKhiChinh, String capBac) {
+    public Wizard(String nameOfPlayer, int level, String gender, String vuKhiChinh, String capBac) {
         super(nameOfPlayer, level, gender);
         this.vuKhiChinh = vuKhiChinh;
         this.capBac = capBac;
@@ -38,6 +38,6 @@ public class ArcherAndGunner extends Character {
 
     @Override
     public String toString() {
-        return "Archer/Gunner{" + super.toString() + "vuKhiChinh=" + vuKhiChinh + ", capBac=" + capBac + '}';
+        return "Wizard{" + super.toString() + "vuKhiChinh=" + vuKhiChinh + ", capBac=" + capBac + '}';
     }
 }
